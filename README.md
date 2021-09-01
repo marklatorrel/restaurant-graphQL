@@ -4,7 +4,7 @@
 This project consist on a GRAPHQL implementation of a restaurant
 
 ## Screenshot
-
+[Restaurant-task.pdf](https://github.com/marklatorrel/restaurant-graphQL/files/7092824/Restaurant-task.pdf)
 
 ## How to run
 You only need to clone the repository and run npm install and npm index.js on the terminal.
