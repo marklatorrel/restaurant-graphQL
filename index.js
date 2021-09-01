@@ -94,11 +94,13 @@ type Mutation{
 var root = {
   restaurant: (arg) => restaurants.find(x => x.id === arg.id),
   restaurants: () => restaurants,
-  setrestaurant: ({ newRestaurant }) => {
-    idlength = restaurants.length(),
-    restaurants.push({ id: idlength, name: newRestaurant.name, description: newRestaurant.description, dishes: newRestaurant.dishes });
-    return newRestaurant;
+
+  setrestaurant: ({ input }) => {
+    idlength = Object.keys(restaurants).length + 1;
+    restaurants.push({ id: idlength, name: input.name, email: input.email, age: input.age });
+    return input;
   },
+
   deleterestaurant: ({ id }) => {
     const ok = Boolean(restaurants[id]);
     let delc = restaurants[id];
